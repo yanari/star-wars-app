@@ -1,5 +1,13 @@
 <div class="list">
+  <ng-template [ngIf]="characters.length === 0">
+    <div class="box">
+      You can add a new character in the 
+      <a routerLink="/new">Create Character</a> 
+      section. Come on, give it a try!
+    </div>
+  </ng-template>
   <app-item
+    #elseBlock
     *ngFor="let character of characters; let isFirst = first"
     [char]="character"
     [isFirst]="isFirst"></app-item>

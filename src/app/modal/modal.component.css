@@ -1,0 +1,13 @@
+.hero {
+  background-color: #363636;
+}
+
+.title-span {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-span > .title {
+  margin-bottom: 0;
+  line-height: 1.5;
+}

@@ -27,7 +27,7 @@ export class ListComponent implements OnInit, OnDestroy {
     this.activatedRoute.params.subscribe(
       (params) => {
         let parameters = params as Character;
-        this.characters = this.swService.getCharacters(parameters.side);
+        this.characters = this.swService.getCharacters(parameters.side.toLowerCase());
         this.loadedSide = parameters.side;
       }
     );

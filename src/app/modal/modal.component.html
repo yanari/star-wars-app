@@ -1,0 +1,29 @@
+<div [ngClass]="modalClasses">
+  <div class="modal-background" (click)="onClick()"></div>
+  <div class="modal-content">
+    <!-- Any other Bulma elements you want -->
+    <section class="hero is-medium is-link">
+      <div class="hero-body">
+        <div class="title-span">
+          <h1 class="title">
+            Welcome to my silly app!
+          </h1>
+          <img alt="My silly little Yoda" src="/assets/baby-yoda.svg"/>
+        </div>
+        <br/>
+        <p class="subtitle">
+          This is something I built to develop my skills in <a href="https://angular.io/">Angular</a>.
+          <br/>
+          <br/>
+          There's a tab for you to create a character from the list and choose which side they're gonna affiliate to or create your own character from scratch with custom name and image!
+          Feel free to switch their sides and play a little with it.
+          <br/>
+          <br />
+          Oh! And enjoy the animations, I took some time with them to make things more interesting. Thanks for visiting!
+        </p>
+      </div>
+    </section>
+    <!---->
+  </div>
+  <button class="modal-close is-large" aria-label="close" (click)="onClick()"></button>
+</div>

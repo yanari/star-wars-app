@@ -12,17 +12,16 @@
     </p>
     <div class="control is-expanded is-fullwidth">
       <span class="is-fullwidth">
-        <ng2-completer
+        <input
+          type="text"
           title="name"
-          id="name"
+          class="input"
           name="name"
-          required
-          inputClass="input"
-          [datasource]="completerData"
-          [minSearchLength]="0"
+          id="name"
           ngModel
-          (ngModelChange)="onInputChange($event)"
-          #nameCtrl="ngModel"></ng2-completer>
+          #nameCtrl="ngModel"
+          required="true"
+        />
       </span>
     </div>
   </div>
@@ -35,12 +34,9 @@
         name="image"
         id="image"
         ngModel
-        [required]="isImageRequired"
-        [disabled]="!isImageRequired"
+        required="true"
         #imageCtrl="ngModel"
-        [placeholder]="isImageRequired ?
-          'Paste a url for the character icon!' :
-          'I already have an icon for this character ;)'">
+        placeholder="Paste a url for the character icon!">
     </span>
   </div>
   <div class="control" style="margin-top: 1rem">
@@ -48,7 +44,7 @@
       class="button is-success is-expanded is-fullwidth"
       [disabled]="nameCtrl.invalid || imageCtrl.invalid"
       type="submit"
-      [ngClass]="{'light-side': selectedSide === 'light', 'dark-side': selectedSide === 'dark'}">
+      [ngClass]="{'light-side': selectedSide === 'Light', 'dark-side': selectedSide === 'Dark'}">
       Add character
     </button>
   </div>

@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HamburgerComponent } from './header/hamburger/hamburger.component';
 import { HamburgerMenuComponent } from './header/hamburger-menu/hamburger-menu.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HamburgerMenuComponent } from './header/hamburger-menu/hamburger-menu.c
     FooterComponent,
     HamburgerComponent,
     HamburgerMenuComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
