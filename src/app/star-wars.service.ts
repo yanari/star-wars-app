@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { LoggerService } from './logger.service';
 import { Subject } from 'rxjs';
 
-import * as _ from 'lodash';
 import { Character } from './list/list.model';
 
 @Injectable()
@@ -46,8 +45,9 @@ export class StarWarsService {
     { name: 'tusken-raider', side: '' },
     { name: 'yoda', side: '' }
   ];
-  randomCharIndex = _.random(this.possibleCharacters.length);
-  randomChar = this.possibleCharacters.filter((el, i) => i === this.randomCharIndex)[0].name;
+  randomCharIndex = Math.floor(Math.random() * this.possibleCharacters.length);
+
+  randomChar = this.possibleCharacters[this.randomCharIndex].name;
   
   private displayedCharacters = [
     { name: this.randomChar, side: '', image: `/assets/characters/${this.randomChar}.svg` }
@@ -76,11 +76,11 @@ export class StarWarsService {
     if (chosenTab === 'all') {
       return this.displayedCharacters.slice();
     }
-    return this.displayedCharacters.filter((char) => char.side === chosenTab);
+    return this.displayedCharacters.filter((char) => char.side.toLowerCase() === chosenTab);
   }
 
   getAllPossibleCharacters() {
-    return [... this.possibleCharacters];
+    return [...this.possibleCharacters];
   }
 
   onSideChosen(charInfo: Character) {
