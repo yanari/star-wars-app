@@ -1,1 +1,11 @@
-<p>header works!</p>
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation" style="margin-bottom: 1rem; right: 0">
+  <div class="navbar-brand">
+    <div class="navbar-item" style="cursor: pointer;">
+      <img class="navbar-item__brand" src="../../assets/deathstar.svg" routerLink="/characters" alt="Characters page">
+    </div>
+    <a class="navbar-burger">
+      <app-hamburger [isActive]="isActive"></app-hamburger>
+    </a>
+  </div>
+  <app-hamburger-menu [isActive]="isActive"></app-hamburger-menu>
+</nav>

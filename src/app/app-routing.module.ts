@@ -11,8 +11,7 @@ const routes: Routes = [
       { path: ':side', component: ListComponent }
     ] },
   { path: 'new', loadChildren: () => import('./create-character/create-character.module').then((mod) => mod.CreateCharacterModule) },
-  { path: '**', redirectTo: 'characters'},
-  { path: '/', redirectTo: 'characters'}
+  { path: '**', redirectTo: 'characters'}
 ];
 
 @NgModule({

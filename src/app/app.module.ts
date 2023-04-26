@@ -12,6 +12,8 @@ import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HamburgerComponent } from './header/hamburger/hamburger.component';
+import { HamburgerMenuComponent } from './header/hamburger-menu/hamburger-menu.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     ItemComponent,
     HeaderComponent,
     FooterComponent,
+    HamburgerComponent,
+    HamburgerMenuComponent,
   ],
   imports: [
     BrowserModule,

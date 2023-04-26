@@ -1,0 +1,96 @@
+.media-left {
+  padding-right: .5rem;
+}
+
+button.button {
+  height: 100%;
+  /* border-color: transparent; */
+}
+
+button.dark-side {
+  border: 1px solid #F44336;
+  color: #F44336;
+}
+
+button.dark-side:hover {
+  background-color: #F44336;
+  color: #fff;
+}
+
+button.dark-side.active {
+  background-color: #F44336;
+  color: rgb(56, 56, 56);
+}
+
+button.light-side {
+  border: 1px solid #2F67F8;
+  color: #2F67F8;
+}
+
+button.light-side:hover {
+  background-color: #2F67F8;
+  color: #fff;
+}
+
+button.light-side.active {
+  background-color: #2F67F8;
+  color: rgb(56, 56, 56);
+}
+
+.card-footer-item {
+  padding: .40rem;
+  color: #333;
+  transition: all .2s ease-in-out;
+}
+
+img {
+  width: 128px;
+  height: 128px;
+}
+
+@media (max-width: 25rem) {
+  .image.is-128x128 {
+    height: 64px;
+    width: 64px;
+  }
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .title.is-3 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle.is-4 {
+    font-size: 1.2rem;
+  }
+
+  .fa-3x {
+    font-size: 2.6em;
+  }
+
+  .card-footer-item {
+    padding: .35rem;
+  }
+}
+
+.is-custom-image {
+  object-fit: cover;
+}
+
+.card {
+  box-shadow: .1px .9px 3px grey;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.card.first {
+  box-shadow: 1px 8px 20px grey;
+  transition: box-shadow .5s ease-in;
+}
+
+.card.fade {
+  transition: box-shadow 1s ease-in;
+}
