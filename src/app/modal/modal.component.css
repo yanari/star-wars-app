@@ -2,6 +2,13 @@
   background-color: #363636;
 }
 
+.hero-body {
+  background-image: url(../../assets/modal.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(80%);
+}
+
 .title-span {
   display: flex;
   justify-content: space-around;

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-import { Ng2CompleterModule } from 'ng2-completer';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { UserDefinedCharacterComponent } from './user-defined-character/user-defined-character.component';
@@ -24,7 +23,6 @@ import { CreateCharacterComponent } from './create-character.component';
     RouterModule.forChild([
       { path: '', component: CreateCharacterComponent }
     ]),
-    Ng2CompleterModule
   ]
 })
 export class CreateCharacterModule { }

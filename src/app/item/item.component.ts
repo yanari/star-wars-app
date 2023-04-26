@@ -42,7 +42,7 @@ export class ItemComponent implements OnInit {
 
     setTimeout(() => {
       this.isFocused = false;
-    }, 1500);
+    }, 500);
   }
 
   onAssign(side: string) {

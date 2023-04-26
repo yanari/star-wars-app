@@ -88,9 +88,9 @@ img {
 
 .card.first {
   box-shadow: 1px 8px 20px grey;
-  transition: box-shadow .5s ease-in;
+  transition: box-shadow .4s ease-in;
 }
 
 .card.fade {
-  transition: box-shadow 1s ease-in;
+  transition: box-shadow .4s ease-in;
 }

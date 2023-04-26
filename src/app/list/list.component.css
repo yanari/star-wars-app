@@ -1,6 +1,6 @@
 .first {
   box-shadow: 1px 8px 20px grey;
-  transition:  box-shadow .5s ease-in;
+  transition:  box-shadow .4s ease-in;
 }
 
 .list {
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 768px) {
-.list {
-  margin-bottom: 18rem;
-}
+  .list {
+    margin-bottom: 18rem;
+  }
 }
