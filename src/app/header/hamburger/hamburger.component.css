@@ -237,17 +237,17 @@ nav ul li.yellow:hover {
 }
 @-webkit-keyframes fadein {
   from {
-    Opacity: 0;
+    opacity: 0;
   }
   to {
-    Opacity: 1;
+    opacity: 1;
   }
 }
 @keyframes fadein {
   from {
-    Opacity: 0;
+    opacity: 0;
   }
   to {
-    Opacity: 1;
+    opacity: 1;
   }
 }
