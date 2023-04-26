@@ -1,0 +1,55 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" (change)="selectedSide = form.value.side">
+  <div class="field has-addons">
+    <p class="control">
+      <span class="select">
+        <select title="side" name="side" id="side" class="is-dark" ngModel>
+          <option value="">{{ display }}</option>
+          <option
+            *ngFor="let option of sides"
+            [value]="option">{{option}}</option>
+        </select>
+      </span>
+    </p>
+    <div class="control is-expanded is-fullwidth">
+      <span class="is-fullwidth">
+        <ng2-completer
+          title="name"
+          id="name"
+          name="name"
+          required
+          inputClass="input"
+          [datasource]="completerData"
+          [minSearchLength]="0"
+          ngModel
+          (ngModelChange)="onInputChange($event)"
+          #nameCtrl="ngModel"></ng2-completer>
+      </span>
+    </div>
+  </div>
+  <div class="control is-expanded is-fullwidth">
+    <span class="is-fullwidth">
+      <input
+        type="url"
+        title="image"
+        class="input"
+        name="image"
+        id="image"
+        ngModel
+        [required]="isImageRequired"
+        [disabled]="!isImageRequired"
+        #imageCtrl="ngModel"
+        [placeholder]="isImageRequired ?
+          'Paste a url for the character icon!' :
+          'I already have an icon for this character ;)'">
+    </span>
+  </div>
+  <div class="control" style="margin-top: 1rem">
+    <button
+      class="button is-success is-expanded is-fullwidth"
+      [disabled]="nameCtrl.invalid || imageCtrl.invalid"
+      type="submit"
+      [ngClass]="{'light-side': selectedSide === 'light', 'dark-side': selectedSide === 'dark'}">
+      Add character
+    </button>
+  </div>
+</form>

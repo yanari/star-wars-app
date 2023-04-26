@@ -1,0 +1,10 @@
+.column {
+  padding: .75rem;
+  padding-top: .5rem;
+}
+
+.columns {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+}

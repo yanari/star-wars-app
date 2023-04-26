@@ -1,0 +1,13 @@
+<div class="columns has-text-centered is-centered" style="width: 100%; margin: 0">
+  <div class="column is-half is-full-mobile">
+    <app-pre-defined-character *ngIf="!userWillAddOwnChar"></app-pre-defined-character>
+    <div *ngIf="!userWillAddOwnChar" class="is-divider" data-content="OR"></div>
+    <button
+      class="button is-fullwidth is-outlined"
+      (click)="userWillAddOwnChar = !userWillAddOwnChar">
+      {{ userWillAddOwnChar ? 'Enter predefined character' : 'Enter Your Own Character' }}
+    </button>
+    <div *ngIf="userWillAddOwnChar" class="is-divider" data-content="OR"></div>
+    <app-user-defined-character *ngIf="userWillAddOwnChar"></app-user-defined-character>
+  </div>
+</div>

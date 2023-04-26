@@ -1,0 +1,6 @@
+<div class="list">
+  <app-item
+    *ngFor="let character of characters; let isFirst = first"
+    [char]="character"
+    [isFirst]="isFirst"></app-item>
+</div>

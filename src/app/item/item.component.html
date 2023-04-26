@@ -1,0 +1,29 @@
+<div class="card fade" [ngClass]="{ first: isFocused }">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-128x128">
+          <img src="{{ path }}" [alt]="char.name" [ngClass]="{'is-custom-image': isCustomImage}">
+        </figure>
+      </div>
+      <div class="media-content">
+        <p style="text-transform: capitalize" class="title is-3">{{ name }}</p>
+        <p class="subtitle is-4">@{{ user }}</p>
+      </div>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <button
+      (click)="onAssign('light')"
+      class="card-footer-item button light-side"
+      [ngClass]="{active: activeSide === 'light'}">
+      <i class="fab fa-3x fa-rebel"></i>
+    </button>
+    <button
+      (click)="onAssign('dark')"
+      class="card-footer-item button dark-side"
+      [ngClass]="{active: activeSide === 'dark'}">
+      <i class="fab fa-3x fa-empire"></i>
+    </button>
+  </footer>
+</div>

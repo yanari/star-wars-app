@@ -1,0 +1,31 @@
+.dark-side {
+  background: #F44336;
+  color: #fff;
+}
+
+.light-side {
+  background: #2F67F8;
+  color: #fff;
+}
+
+.dark-side:hover {
+  background: #f33426;
+  color: #fff;
+}
+
+.light-side:hover {
+  background: #0e4ff7;
+  color: #fff;
+}
+
+.dark-side:active {
+  background: #f33426;
+  color: #fff;
+  font-weight: bold;
+}
+
+.light-side:active {
+  background: #0e4ff7;
+  color: #fff;
+  font-weight: bold;
+}

@@ -1,0 +1,40 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm" (change)="selectedSide = form.value.side">
+  <div class="field has-addons">
+    <p class="control">
+      <span class="select">
+        <select title="side" name="side" id="side" class="is-dark" ngModel>
+          <option value="">{{ display }}</option>
+          <option
+            *ngFor="let option of sides"
+            [value]="option">{{ option }}</option>
+        </select>
+      </span>
+    </p>
+    <div class="control is-expanded has-icons-left is-focused">
+      <span class="select is-fullwidth">
+        <select title="name"
+          name="name"
+          id="name"
+          required
+          ngModel
+          #nameCtrl="ngModel">
+          <option value="" disabled selected hidden>Select character</option>
+          <option
+            style="direction: rtl"
+            *ngFor="let char of allCharacters"
+            [value]="char.name">{{ char.name }}</option>
+        </select>
+      </span>
+      <div class="icon is-small is-left">
+        <i class="fas fa-user"></i>
+      </div>
+    </div>
+  </div>
+  <p class="control">
+    <button
+      class="button is-success is-expanded is-fullwidth"
+      [ngClass]="{'light-side': selectedSide === 'light', 'dark-side': selectedSide === 'dark'}"
+      [disabled]="nameCtrl.invalid"
+      type="submit">Add character</button>
+  </p>
+</form>

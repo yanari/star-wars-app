@@ -1,0 +1,19 @@
+.footer {
+  margin-top: 1rem;
+  background-color: #f1f1f1;
+  padding: 3rem 1.5rem 2rem;
+  height: 11.5rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 16rem;
+  }
+}
+
+.icon {
+  vertical-align: -.225em;
+}
